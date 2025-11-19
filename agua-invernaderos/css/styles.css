@@ -1,0 +1,215 @@
+/* Custom Styles for AquaMonitor */
+
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #00a8e8;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+#reviewLoginPrompt {
+    display: none !important;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0066cc 0%, #00a8e8 100%);
+  padding: 80px 0;
+  min-height: 600px;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+/* Feature Icons */
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Product Gallery */
+.product-gallery .main-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.thumbnail-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.thumbnail-img:hover,
+.thumbnail-img.active {
+  opacity: 1;
+  border-color: var(--primary-color) !important;
+  transform: scale(1.05);
+}
+
+/* Rating Stars */
+.rating-input {
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.rating-star {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating-star:hover,
+.rating-star.active {
+  color: #ffc107;
+}
+
+/* Membership Cards */
+.membership-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.membership-card.selected {
+  border: 2px solid var(--primary-color);
+  background-color: #f0f8ff;
+}
+
+/* Map Container */
+#map {
+  background-color: #e5e3df;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .display-3 {
+    font-size: 2rem;
+  }
+
+  .thumbnail-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Loading spinner */
+.spinner-border-custom {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3rem;
+}
+
+/* Card hover effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Button enhancements */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form focus states */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+/* Alert animations */
+.alert {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.membership-card {
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.membership-card.selected {
+    border: 2px solid #0070ba;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 112, 186, 0.3);
+}
+
